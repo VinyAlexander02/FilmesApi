@@ -1,0 +1,8 @@
+// Comando para rodar o projeto na porta https
+dotnet run --launch-profile https
+
+// Comando para gerar uma migration
+dotnet ef migrations add Creating_Film_Table
+
+// Comando para fazer a aplicação das migrations
+dotnet ef database update
