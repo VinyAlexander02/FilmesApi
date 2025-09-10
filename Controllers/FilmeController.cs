@@ -1,10 +1,14 @@
 namespace FilmesApi.Controllers;
 
+using System;
 using AutoMapper;
+using Azure;
 using FilmesApi.Data;
 using FilmesApi.Data.Dtos;
-using FilmesApi.Models; 
+using FilmesApi.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 [ApiController]
 [Route("[controller]")]
@@ -31,9 +35,9 @@ public class FilmController : ControllerBase
     }
 
     [HttpGet]
-    public List<Film> GetFilms([FromQuery] int skip = 0, [FromQuery] int take = 50)
+    public IEnumerable<ReadFilmDto> GetFilms([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
-        return _context.Films.Skip(skip).Take(take).ToList();
+        return _mapper.Map<List<ReadFilmDto>>(_context.Films.Skip(skip).Take(take).ToList());
     }
 
     [HttpGet("{id}")]
@@ -41,7 +45,8 @@ public class FilmController : ControllerBase
     {
         var film = _context.Films.FirstOrDefault(f => f.Id == id);
         if (film == null) return NotFound();
-        return Ok(film);
+        var filmDto = _mapper.Map<ReadFilmDto>(film);
+        return Ok(filmDto);
     }
 
     [HttpPut("{id}")]
@@ -54,5 +59,47 @@ public class FilmController : ControllerBase
         _mapper.Map(filmDto, film);
         _context.SaveChanges();
         return NoContent();
+    }
+
+    [HttpPatch("{id}")]
+    public IActionResult UpdateFilmPath(int id, JsonPatchDocument<UpdateFilmDto> patch)
+    {
+        var film = _context.Films.FirstOrDefault(
+            film => film.Id == id
+        );
+        if (film == null) return NotFound();
+
+        var filmToUpdate = _mapper.Map<UpdateFilmDto>(film);
+        patch.ApplyTo(filmToUpdate, ModelState);
+
+        if (!TryValidadeModel(filmToUpdate)) {
+            return ValidateProblem(ModelState);
+        }
+
+        _mapper.Map(filmToUpdate, film);
+        _context.SaveChanges();
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult FilmDelete(int id)
+    {
+        var film = _context.Films.FirstOrDefault(
+            film => film.Id == id
+        );
+        if (film == null) return NotFound();
+        _context.Remove(film);
+        _context.SaveChanges();
+        return NoContent();
+    }
+
+    private IActionResult ValidateProblem(ModelStateDictionary modelState)
+    {
+        throw new NotImplementedException();
+    }
+
+    private bool TryValidadeModel(UpdateFilmDto filmToUpdate)
+    {
+        throw new NotImplementedException();
     }
 }

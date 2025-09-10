@@ -7,7 +7,7 @@ builder.Services.AddDbContext<FilmContext>(options => options.UseSqlServer(build
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // ADICIONE ESTA LINHA PARA REGISTRAR OS SERVIÇOS DOS CONTROLLERS
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
