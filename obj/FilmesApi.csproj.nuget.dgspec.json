@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\FilmesApi.csproj": {}
+    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\FilmesApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\FilmesApi.csproj": {
+    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\FilmesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\FilmesApi.csproj",
+        "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\FilmesApi.csproj",
         "projectName": "FilmesApi",
-        "projectPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\FilmesApi.csproj",
+        "projectPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\FilmesApi.csproj",
         "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\obj\\",
+        "outputPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

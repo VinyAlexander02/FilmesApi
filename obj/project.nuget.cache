@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bz4dXY64e3Q=",
+  "dgSpecHash": "D7QDBw+bICY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\FilmesApi\\FilmesApi.csproj",
+  "projectFilePath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Folders\\Alura\\2 - .NET\\1 - .NET6-CriandoAPI\\filmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinic\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\vinic\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

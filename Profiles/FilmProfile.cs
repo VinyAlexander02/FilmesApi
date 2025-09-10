@@ -8,5 +8,6 @@ public class FilmProfile : Profile {
     public FilmProfile()
     {
         CreateMap<CreateFilmDto, Film>();
+        CreateMap<UpdateFilmDto, Film>();
     }
 }
